@@ -9,20 +9,20 @@
 
 	<!-- Component -->
 
-	<img src="component.jpg"><!--This is a call to action image-->
-    <section> <!--Section because order doesn't matter and they might with difficulty stand alone; having other section makes more sense.-->
+	<img src="component.jpg" alt="Sign up"><!--This is a call to action image. It does include the text off to the side-->
+    <section> <!--Section because order doesn't matter and they might with difficulty stand alone; having other section makes more sense, and there is a heading.-->
         <h1>Sign up for membership</h1>
         <p>Quick description of the Sign up process and benefits</p>
-        <button>Sign Up</button>
+        <a href="">Sign Up</a> <!--link because a button shouldn't redirect to another page without doing any backend stuff.-->
     </section>
-    <section><!--Login section-->
+    <section><!--Login section, has a heading-->
         <h1>Login</h1>
         <form>
-            <label>Username</label>
+            <label for="">Username</label>
             <input type="text">
-            <label>Password</label>
+            <label for="">Password</label>
             <input type="password">
-            <input type="submit">
+            <button type="submit">Login</button>
         </form>
     </section>
 

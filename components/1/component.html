@@ -10,21 +10,20 @@
 	<!-- Component -->
 
 
-    <div> <!---This would be an overlay to blur or darken the rest of the screen--->
-
+    <div> <!---Let's look at the flowchart. This has no semantic meaning, only used for css hooks. It ir rightfully a div, and belongs because although it is empty, it covers the whole document with CSS, something I wouldn't know how to do otherwise. Maybe you could give literally everything else a class that toggles the brightness of the colors but that would be overly complicated. I feel as though any other method would be overly complicated and not justify removing a whopping 11 characters from the code, just so that there isn't an empty div that isn't even blank and has no semantics anyways.--->
     </div>
 
-    <div> <!---This would be placed on top of the overlay--->
+    <article> <!---This would be placed on top of the overlay using z-index. --->
         <img src="component.jpg"> <!---this is temp for replacement with an actual image--->
 
-        <span>X</span>
-        <span><</span>  <!---These are for the overlayed controls. --->
-        <span>></span>
+        <button>Close</button>
+        <button>Previous</button>  <!---These are for the overlayed controls. I chose buttons because they will affect the front end of the page, and does not take the user to a different page, per best practices.--->
+        <button>Next</button>
 
         <h1>Image title or similarly important content</h1>
         <p>sub information</p> <!--depending on content, could also be h2 etc--->
 
-    </div>
+    </article>
 	<!-- End Component -->
 	
 </body>
