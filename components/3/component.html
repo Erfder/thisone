@@ -8,28 +8,35 @@
 <body>
 
 	<!-- Component -->
-    <nav><!---This is a list of links. It may or may not be the main list for the site. Section also works if it isn't.-->
-        <div> <!--These would be the images on top, arranged horizontally with CSS. Each img has its own so that the divs can have the padding and clipped corner from the original component, as well as have the text within this background color. This is done this way so that the entire div may be clicked as opposed to just the image, or just the text within the "card".--->
-            <img src="component.jpg" alt="">
-            <h1></h1>
-        </div>
-        <div>
-            <img src="component.jpg" alt="">
-            <h1></h1>
-        </div>
-        <div>
-            <img src="component.jpg" alt="">
-            <h1></h1>
-        </div>
-
-
-        <!--These would be the Text on the bottom, arranged horizontally according to the spacing of the above images. They are anchor tags because they will link to another page and do nothing else. They can share the same class as the above divs.--->
-            <a href="">text for img 1</a>
-
-            <a href="">text for img 2</a>
-
-            <a href="">Text for img 3</a>
-        </nav>
+    <section>
+        <article>
+            <div><!---Divides the section into the two pieces: the image and title and "more" links. The divs are indeed only used for CSS other than that-->
+                <img src="component.jpg" alt="TCG">
+                <h1>New In TCG</h1>
+            </div>
+            <div>
+                <a href="">Read More</a>
+            </div>
+        </article>
+        <article>
+            <div>
+                <img src="component.jpg" alt="Dragonite">
+                <h1>Dragonite</h1>
+            </div>
+            <div>
+                <a href="">Read More</a>
+            </div>
+        </article>
+        <article>
+            <div>
+                <img src="component.jpg" alt="Video">
+                <h1>Animation</h1>
+            </div>
+            <div>
+                <a href="">Watch</a>
+            </div>
+        </article>
+    </section>
 
 
 	<!-- End Component 1-->
