@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Tweet knockoff form: Chase Herman</title>
-	<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+	<!--link rel="stylesheet" type="text/css" href="../../css/reset.css" /-->
 	<link rel="stylesheet" type="text/css" href="component.css" />
 </head>
 <body>
@@ -13,15 +13,20 @@
         <form>
             <h1>Compose new Tweet</h1>
 
-            <p><label>Tweet<input type="text"></label></p>
+            <p><input type="text" id="tweet"><label for="tweet">Tweet</label></p>
 
-            <p><label>Add Photo<input type="file"></label></p>
+            <p><input type="file" id="photo"><label for="photo">Add Photo</label></p>
 
-            <p><label>Location <input type="radio" value="disabled"><input type="radio" value="enabled"></label></p>
+            <p>
+                <input type="radio" value="disabled" name="location" id="locd"><label for="locd" class="radio">Enabled</label>
 
-            <button type="submit">Tweet</button>
 
-            <button>Close</button>
+                <input type="radio" value="enabled" name="location" checked id="loce"><label for="loce" class="radio">Disabled</label></p>
+
+            <p>140</p>
+            <button type="submit" id="submit">Tweet</button>
+
+            <button id="close">Close</button>
         </form>
 
 	<!-- End Component -->

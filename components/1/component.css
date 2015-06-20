@@ -3,6 +3,88 @@
 COMPONENT STYLESHEET
 ================================================================================ */
 
-/* HEADER ======================================== */
+/* Image article and text ======================================== */
 
-/* HEADER ======================================== */
+
+
+article::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: -1;
+}
+article{
+    color: #666;
+    font: 10px Verdana, sans-serif; /*font used in original is verdana, defaults to other sans if not recognized*/
+    background: #fff;
+    width: 420px;
+    padding: 10px 10px 10px 10px;
+    position: absolute;
+    top: 50px;
+    left: calc(50% - 210px); /*Half the screen size is the center of the image ((400 + 10 + 10)/ 2). Not auto becuase it is positioned absolute for the buttons to be the same way, and auto margin doesn't work this way. */
+}
+
+article img{
+     max-width: 400px; /*400 because that is the screen size of the device it is taken from, therefore any similar images will all be this size.*/
+    margin-bottom: 10px;
+ }
+article h1{
+    font-weight: bold;
+}
+
+
+
+/*Buttons ======================================== */
+
+
+
+#next{ /*Ids are used as selectors here because there will only be one, and order can be re-arranged, so nth selectors shouldn't be used.*/
+    position: absolute;
+    top: 30px;
+    right: 0;
+    color: transparent;
+    background: transparent; /*used over display: none; because the :hover pseudo class didnt detect it while hidden in this case.*/
+}
+#next:hover{
+   display: inline-block;
+    background: #fff url("next.png") no-repeat 50% 50% / 25px;
+    cursor: pointer;
+}
+
+
+#previous{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    color: transparent;
+    background: transparent;
+}
+#previous:hover{
+    display: inline-block;
+    background: #fff url("previous.png") no-repeat 50% 50% / 25px;
+    cursor: pointer;
+}
+
+
+#close{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    height: 33px; /*So that neither the button nor its active highlight overlaps image*/
+    background: url("close.png") no-repeat 50% 50% / 25px;
+    cursor: pointer;
+}
+
+
+article button{
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #fff;
+    border-radius: 5px;
+    color: transparent; /*so that original text is still there for screen readers, but is not seen*/
+}

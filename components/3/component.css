@@ -3,6 +3,40 @@
 COMPONENT STYLESHEET
 ================================================================================ */
 
-/* HEADER ======================================== */
+/* Corners on divs ======================================== */
+article{
 
-/* HEADER ======================================== */
+}
+article div{
+    width: 150px;
+    background: #242424;
+    color: #fff;
+    font: bold 1.1em sans-serif;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto;
+    position: relative; /*So I can absolute position the ::after*/
+}
+div::after {
+    content: '';
+    position: absolute;
+    top: 0; right: 0; /*to set it to the upper right corner*/
+    border-top: 17px solid white; /*how tall the box is. Using only these two values, it makes a box that is half one color, half another along a diagonal.*/
+    border-left: 17px solid transparent; /*how long it is*/
+}
+
+/* Other ======================================== */
+article a{
+    color: #ffffff;
+}
+article img{
+    width: 100%;
+}
+
+@media (min-width: 600px) {
+    article{
+        width: calc(91% / 3); /*  3% left margin*3 = 9%, 100%-9% = 91%.  /3 because there are 3, obviously*/
+        float: left;
+        margin: 50px 0 0 3%;
+    }
+}

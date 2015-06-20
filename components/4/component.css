@@ -3,6 +3,72 @@
 COMPONENT STYLESHEET
 ================================================================================ */
 
-/* HEADER ======================================== */
+nav{
+    font: 10px Helvetica, sans-serif;
+    width: 200px; /*set width so that text isn't misaligned, and it is set on the original as well.*/
+    height: 500px;
+    background: #fff;
+    padding: 20px 0 0 20px;
+    box-shadow: 5px 0 10px -1px #777;
+    -webkit-box-shadow: 5px 0 10px -1px #ddd;
+}
 
-/* HEADER ======================================== */
+/*Logo*/
+
+nav a > h1{
+    text-indent: -9999px;
+    background: url("Logo.png") no-repeat 0 0 / 100px;
+    height: 35px;
+}
+
+/*all other headings*/
+
+nav > h1{
+    color: #BC001C;
+    border-top: 1px solid #cdcdcd;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+/*All others*/
+
+nav li{
+    width: 80%;
+    margin: 10px 0 0 10px;
+    padding-left: 25px;
+    text-transform: capitalize;
+}
+nav a{
+    color: #000;
+}
+nav a:active{
+    color: #fff;
+    background: #BC001C;
+}
+/*==========  Icons  ====================================*/
+#w2w{ /*Targeted as ID because although the order here doesn't change often, they are being selected based on the content, not order.*/
+    background: url("home.png") no-repeat 0 0 / 15px;
+}
+#mc{
+    background: url("My%20Account.png") no-repeat 0 0 / 15px;
+}
+#ms{
+    background: url("Subs.png") no-repeat 0 0 / 15px;
+}
+.pl{ /*This is a class because multiple custom playlists will share the same logo, and order changes often in this category, depending on additions, subtractions, which is viewed last,etc*/
+    background: url("Playlist.png") no-repeat 0 0 / 15px;
+}
+#liked{
+    background: url("Liked.png") no-repeat 0 0 / 15px;
+}
+/*These channels change places every time a page is loaded, so nth child could be used along with javascript to identify what is there (and what their channel art is), but I will use Ids because I don't have javascript on these yet.*/
+#s1{
+    background: url("Sub1.png") no-repeat 0 0 / 15px;
+}
+#s2{
+    background: url("Sub2.png") no-repeat 0 0 / 15px;
+}
+#s3{
+    background: url("Sub3.png") no-repeat 0 0 / 15px;
+}

@@ -3,6 +3,124 @@
 COMPONENT STYLESHEET
 ================================================================================ */
 
-/* HEADER ======================================== */
+/* Form itself ======================================== */
+form::before{
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+form{
+    font-family: sans-serif;
+    background: #E7F1E6;
+    max-width: 600px;
+    height: 210px;
+    padding: 10px 10px 10px 10px;
+    margin: 20% auto;
+    border-radius: 5px;
+    position: relative;
+    top: 10px;
+}
+form h1{
+    background: #fff;
+    color: #758796;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    left: -10px;
+    top: -20px;
+    border-bottom: 1px solid #C8DEC3;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: normal;
+    height: 22px;
 
-/* HEADER ======================================== */
+}
+label{
+    color: #59974D;
+    padding-left: 25px;
+    height: 25px;
+    float: left;
+    margin: 10px 20px 0 20px;
+}
+/*Character counter=====================================*/
+p{
+    margin: 0;
+}
+p:last-of-type{/*to select the character count*/
+    display: none; /*hide for mobile, as it takes up space*/
+}
+@media (min-width: 600px) {
+    p:last-of-type{
+        display: block;
+        color: #758796;
+        position: absolute;
+        right: 125px;
+        bottom: 22px;
+    }
+}
+
+input[type='text']{
+    border: 1px solid #C8DEC3;
+    border-radius: 3px;
+    width: 98%;
+    height: 100px;
+    position: relative;
+    top: -15px;
+    left: 1%;
+}
+
+input[type='text'] + label{ /*hides the text's label*/
+    display: none;
+}
+
+/*Buttons=====================================*/
+#submit{
+    position: absolute;
+    right: 2%;
+    bottom: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 15px;
+    background: #C3DaBf url("quill.png") no-repeat 7px 9px / 30px; /*This is not accurate, but the color picker says the color is spot-on. So to actually get it correct, it would be pure guesswork.*/
+    border-radius: 3px;
+    border: none;
+    padding: 15px 15px 15px 45px;
+}
+#close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background: url("close.png") no-repeat 10px 13px / 15px;
+    border: none;
+    color: transparent;
+}
+/* Radio boxes ======================================== */
+
+input[type="radio"] + label{
+    position: absolute; /*locks deselected option into place, lies and says the opposite so that when Enabled is clicked, the disabled value is really checked to disable it, if that makes sense*/
+    background: url("Pin.png") no-repeat 0 -4px / 20px;
+}
+
+input[type="radio"]:checked + label{ /*hides the selected button, so the only one visible is still clickable*/
+    display: none;
+}
+input[type="radio"]{    /*hides the radio circles*/
+    display: none;
+}
+
+/* File selector ======================================== */
+
+input[type='file']{ /*hides the text's label*/
+    display: none;
+}
+input[type='file'] + label{
+    background: url("Camera.png") no-repeat 0 0 / 20px;
+}

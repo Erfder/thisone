@@ -5,4 +5,42 @@ COMPONENT STYLESHEET
 
 /* HEADER ======================================== */
 
+section{
+    padding-top: 120px;
+    background: #fff url("trees.png")no-repeat 10% -180px;
+}
+section > h1{ /*to directly target the h1 for the entire section, whereas "section h1" would also grab all the other h1s.*/
+    height: 200px;
+    width: 200px;
+    background: transparent url("friendsofmighty.png") no-repeat 0 0 / 150px;
+    position: absolute;
+    left: calc(50% - 75px);
+    top: 45px;
+    text-indent: -9999px;
+
+}
+article{
+    float: left;
+    margin-top: 85px;
+}
+img{
+    width: 30%;
+    margin: 0 5% 5% 0;
+    float: left;
+}
+article h1{
+    font: bold 1em sans-serif;
+    text-transform: uppercase;
+    color: #a58751;
+}
+p{
+    font: 1em Times, serif;
+    color: #333;
+}
 /* HEADER ======================================== */
+@media (min-width: 600px) {
+    article{
+        width: calc(91% / 3);
+        margin-left: 3%;
+    }
+}
