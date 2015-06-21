@@ -5,4 +5,89 @@ COMPONENT STYLESHEET
 
 /* HEADER ======================================== */
 
-/* HEADER ======================================== */
+article{
+    text-align: center;
+    color: #444;
+    padding: 10px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+article img{
+    float: left;
+    margin: 0 5% 20px 0;
+}
+article h1{
+    width: 100%;
+    font-size: 1.5em;
+}
+article strong{
+    font-weight: bold;
+}
+article h2{
+    width: 100%;
+    font-size: .8em;
+    margin: 15px 0 30px 0;
+}
+/* right side of image/media ======================================== */
+article dl{
+    text-align: left;
+    font-weight: bold;
+}
+dt{
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+dd{
+    margin-bottom: 15px;
+}
+
+article button{
+    background: #2CDB60;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    width: 120px;
+    float: left;
+    margin: 30px 5% 0 0;
+}
+
+
+input[type="radio"] + label{
+    float: left;
+    width: 15%;
+    margin: 35px 70% 30px 0;
+    padding-left: 20px;
+    background: url("Star.png") no-repeat 0 0 / 20px;
+}
+input[type="radio"]:checked + label{ /*hides the selected button, so the only one visible is still clickable*/
+    display: none;
+}
+input[type="radio"]{    /*hides the radio circles*/
+    display: none;
+}
+
+
+article p{
+   float: left;
+    color: #aaa;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #aaa;
+}
+/*========================*/
+@media (min-width: 650px) {
+    img{
+        width: 55%;
+        max-width: 500px; /*arbitrary stopping point so it doesn't lose further quality*/
+    }
+    dl{
+        width: auto;
+        float: none;
+    }
+    input[type="radio"] + label {
+        float: left;
+        margin: 35px 5% 30px 0;
+    }
+    button{
+        width: 20%;
+    }
+}

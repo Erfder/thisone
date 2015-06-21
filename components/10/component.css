@@ -4,5 +4,64 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
-
-/* HEADER ======================================== */
+img{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 700px;
+}
+h1{
+    text-indent: -9999px;
+}
+nav{
+    text-transform: uppercase;
+    font-family: "gesta",sans-serif;
+    position: fixed;  /*This must be toggleable with javascript. I should toggle to this once a certain distance (in this case 700px) has been scrolled. Until then it should remain pos-static or invisible*/
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background: url("bkgrnd6.jpg") repeat-x;
+    box-shadow: 0 10px 20px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 10px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 10px 20px -4px rgba(0,0,0,0.75);
+}
+#logo{ /*rather than :first-of-type because it will almost always be first, but this style isn't because it is first, it is because of the logo content*/
+    text-indent: -9999px;
+    width: 150px;
+    height: 20px;
+    position: relative;
+    top: 17px;
+    left: 50px;
+    background: url("logo.png") no-repeat 0 0 / 100%;
+    float: none;
+    display: block;
+}
+nav li{
+    display: inline-block;
+    width: 60px; /*for a total of a quarter*/
+    float: right;
+    text-align: center;
+}
+nav li:nth-child(2){/*:nth-of-type because it doesn't matter what is there, this will always be on the last one. 2 because of how right floats stack*/
+    padding-right: 60px;
+    width: 110px;
+    background: url("cactus.png") no-repeat 50px -3px / 15px;
+}
+nav a{
+    color: #000;
+    font-size: 0.7em;
+    font-weight: bold;
+}
+nav a:hover{
+    color: #75B5DA;
+}
+/* Content ======================================== */
+main{
+    width: 100%;
+    height: 800px;
+    margin-top: 680px;
+    background: url("bkgrnd6.jpg");
+    box-shadow: 0 -5px 20px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0 -5px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0 -5px 20px -4px rgba(0,0,0,0.75);
+}

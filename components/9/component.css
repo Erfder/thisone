@@ -2,7 +2,110 @@
 ================================================================================
 COMPONENT STYLESHEET
 ================================================================================ */
+body{
+    background: #212121;
+}
+/* Upper half ======================================== */
 
-/* HEADER ======================================== */
+section{
+    width: 90%;
+    margin: 5%;
+    color: #ffffff;
+    font-family: Ariel, sans-serif;
+    float: left;
+}
+#ht1{ /*Id because the color and formatting is directly based on the content, as opposed to position or element*/
+    background: #000;
+    padding: 30px 0 30px 50px;
+}
+section > *{
+    float: left;
+    margin: 2%;
+    font-family: Ariel, sans-serif;
+}
+section dt{
+    font-size: 1.2em;
+}
+section dd{
+    font-size: .6em;
+}
 
-/* HEADER ======================================== */
+/* Sign up ======================================== */
+
+section h1{
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 40px;
+}
+section > h1{
+    position: relative;
+    top: 10px;
+}
+section > p{
+    width: 100%;
+}
+section a{
+    width: 100px;
+    height: 40px;
+    display: block;
+    position: relative;
+    left: 20%;
+    background: #E00000;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .8em;
+    padding-top: 15px;
+    margin-top: 20px;
+
+}
+/* Form ======================================== */
+
+section form{
+    float: left;
+    border: 1px solid #444;
+    padding: 5px 5% 15px 15px;
+}
+form button{
+    background: #E00000;
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 60px;
+    float: right;
+}
+form input{
+    border: 1px solid #E00000;
+    margin: 10px 0 10px 10px;
+    width: 95%; /*this is so that I don't have to separate the tags to get the label to be on top of the input as opposed to next to it... theoretically it is possible to still see this happen, but the monitor size would be large.*/
+}
+@media (min-width: 600px) {
+    section > h1{
+        width: 40%;
+        clear: left;
+    }
+    section > p{
+        width: 34%;
+        clear: left;
+    }
+    section a{
+        clear: left;
+    }
+    section form{
+        float: right;
+        width: 40%;
+        height: 220px;
+    }
+    section > h1:after{ /*Fake border*/
+        content: '';
+        position: absolute;
+        width: calc(100% + 15px);
+        height: 220px;
+        left: -15px;
+        top: -10px;
+        display: block;
+        background: transparent;
+        border: 1px solid #444;
+        z-index: -1;
+    }
+}

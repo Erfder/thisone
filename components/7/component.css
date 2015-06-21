@@ -3,6 +3,107 @@
 COMPONENT STYLESHEET
 ================================================================================ */
 
-/* HEADER ======================================== */
+/* Structure ======================================== */
+body{
+    background: #666;
+}
+nav{
+    width: 100%;
+    background-color: #1C222B;
+}
+nav ul{
+    display: inline-block;
+    width: 94%; /*The links take up 100% of that 90%*/
+    margin: 0 3% 0 3%;
+    height: 50px;
+    border: 1px solid #000000;
+}
 
-/* HEADER ======================================== */
+/* Main buttons======================================== */
+nav > ul > li{/*direct descendants used to target only those main headings. Classes could be used here, like maybe .main and .sub*/
+    height: 50px;
+    position: relative;
+    border-left: 1px solid rgba(252,252,252,0.3);
+    border-right: 1px solid rgba(0,0,0,0.3);
+    background: url("buttonbg.png") repeat-x 0 0 / 5px; /*The image is quite large, so it must be scaled down here, 5px working best*/
+}
+nav > ul > li:not(:last-of-type){
+    float: left;
+    width: 12%; /*the buttons that aren't the smaller grey are 12%, *8=96% and 2px are spared for the margin*/
+    text-align: center;
+}
+nav > ul > li:last-of-type{
+    float: left;
+    width: 4%;
+}
+nav > ul > li > a{
+    color: #fff;
+    font: 1.1em bold HelveticaNeue, Helvetica, sans-serif;
+    border-bottom: 6px solid #FFF;
+    display: block;
+    height: 50px;
+    padding: 10px;
+}
+nav > ul > li:last-of-type > a{
+    color: transparent;
+    background: url("settings.png") no-repeat 50% 50%; /*In this case 50 50 is the center*/
+}
+
+/* Main buttons Colors. These are numerically ordered because the color does not indicate anything about the item.======================================== */
+
+nav > ul > li:nth-of-type(1) > a{
+    border-color: #cb2b2b;
+}
+nav > ul > li:nth-of-type(2) > a{
+    border-color: #cb682b;
+}
+nav > ul > li:nth-of-type(3) > a{
+    border-color: #c8cb2b;
+}
+nav > ul > li:nth-of-type(4) > a{
+    border-color: #30cb2b;
+}
+nav > ul > li:nth-of-type(5) > a{
+    border-color: #2bc2cb;
+}
+nav > ul > li:nth-of-type(6) > a{
+    border-color: #2b4fcb;
+}
+nav > ul > li:nth-of-type(7) > a{
+    border-color: #632bcb;
+}
+nav > ul > li:nth-of-type(8) > a{
+    border-color: #b32bcb;
+}
+nav > ul > li:nth-of-type(9) > a{
+    border-color: #5C5C5C;
+}
+/* Submenus ======================================== */
+nav li > ul{
+    /*display: none; ===========this would be placed once javascript is used to toggle this on hovering over the main items*/
+    border: 1px solid #777;
+    border-radius: 3px;
+    background: #fff;
+    text-align: left;
+    height: auto;
+    width: 140%; /*taken directly from source. 140% covers all the subheadings' lengths*/
+    padding: 10px;
+}
+nav li > ul::before{
+    content: ' ';
+    display: block;
+    width: 14px;
+    top: -17px;
+    height: 7px;
+    position: relative;
+
+    left: 5px;
+    background: url("arrow.png") no-repeat 0 0 / 100%;
+}
+nav li > ul > li{
+    padding: 5px;
+    border-bottom: 1px dotted #aaa;
+}
+nav li > ul > li > a{
+    color: #2b4fcb;
+}

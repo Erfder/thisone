@@ -4,28 +4,32 @@ COMPONENT STYLESHEET
 ================================================================================ */
 
 /* HEADER ======================================== */
-
+body{
+    background: #78693E;
+}
 section{
-    padding-top: 120px;
-    background: #fff url("trees.png")no-repeat 10% -180px;
+    padding: 120px 20px 0 20px;
+    background: #F6ECDA url("trees.png")no-repeat 10% -180px;
 }
 section > h1{ /*to directly target the h1 for the entire section, whereas "section h1" would also grab all the other h1s.*/
     height: 200px;
     width: 200px;
     background: transparent url("friendsofmighty.png") no-repeat 0 0 / 150px;
     position: absolute;
-    left: calc(50% - 75px);
+    left: calc(50% - 75px); /*to get center of image into center of screen*/
     top: 45px;
-    text-indent: -9999px;
-
+    text-indent: -9999px; /*remove text*/
+    z-index: 1; /*place overtop of the articles*/
 }
 article{
     float: left;
-    margin-top: 85px;
+    background: #fff;
+    margin-top: 80px;
+    padding: 5%;
 }
 img{
-    width: 30%;
-    margin: 0 5% 5% 0;
+    width: 36%;
+    margin-right: 2%;
     float: left;
 }
 article h1{
@@ -40,7 +44,14 @@ p{
 /* HEADER ======================================== */
 @media (min-width: 600px) {
     article{
-        width: calc(91% / 3);
-        margin-left: 3%;
+        position: relative;
+        top: -80px;
+        width: 30%; /* times 3 = 90%. Therefore, each side has 5% for margin.*/
+        min-height: 350px;
+        padding: 80px 1% 0 1%;
+        background: #fff url("lines.png") repeat-x 0 12px / 100%;
+    }
+    article:first-of-type{
+        margin-left: 5%;
     }
 }
