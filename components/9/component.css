@@ -59,7 +59,7 @@ section a{
     margin-top: 20px;
 
 }
-/* Form ======================================== */
+/* Login Form ======================================== */
 
 section form{
     float: left;
@@ -79,6 +79,8 @@ form input{
     margin: 10px 0 10px 10px;
     width: 95%; /*this is so that I don't have to separate the tags to get the label to be on top of the input as opposed to next to it... theoretically it is possible to still see this happen, but the monitor size would be large.*/
 }
+
+/* Media ====================================*/
 @media (min-width: 600px) {
     section > h1{
         width: 40%;

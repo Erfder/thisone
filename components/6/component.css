@@ -43,7 +43,6 @@ form button{
     width: 55px; /*I assume what these are because of the screenshot size*/
     height: 18px;
 }
-
 form p:last-of-type::after{ /*to get all the floated inputs within the visual area of the form*/
     content: '';
     width: 50px;
@@ -53,6 +52,8 @@ form p:last-of-type::after{ /*to get all the floated inputs within the visual ar
     clear: both;
     display: block;
 }
+
+
 section > h1{
     font-family: serif;
     font-size: 2em;

@@ -47,28 +47,28 @@ nav a:active{
     background: #BC001C;
 }
 /*==========  Icons  ====================================*/
-#w2w{ /*Targeted as ID because although the order here doesn't change often, they are being selected based on the content, not order.*/
+#whatToWatch{ /*Targeted as ID because although the order here doesn't change often, they are being selected based on the content, not order.*/
     background: url("home.png") no-repeat 0 0 / 15px;
 }
-#mc{
+#myChannel{
     background: url("My%20Account.png") no-repeat 0 0 / 15px;
 }
-#ms{
+#mySubscriptions{
     background: url("Subs.png") no-repeat 0 0 / 15px;
 }
-.pl{ /*This is a class because multiple custom playlists will share the same logo, and order changes often in this category, depending on additions, subtractions, which is viewed last,etc*/
+.playlist{ /*This is a class because multiple custom playlists will share the same logo, and order changes often in this category, depending on additions, subtractions, which is viewed last,etc*/
     background: url("Playlist.png") no-repeat 0 0 / 15px;
 }
 #liked{
     background: url("Liked.png") no-repeat 0 0 / 15px;
 }
 /*These channels change places every time a page is loaded, so nth child could be used along with javascript to identify what is there (and what their channel art is), but I will use Ids because I don't have javascript on these yet.*/
-#s1{
-    background: url("Sub1.png") no-repeat 0 0 / 15px;
+#HoopsandHipHop{
+    background: url("HoopsandHipHop.png") no-repeat 0 0 / 15px;
 }
-#s2{
-    background: url("Sub2.png") no-repeat 0 0 / 15px;
+#Yourenigma{
+    background: url("Yourenigma.png") no-repeat 0 0 / 15px;
 }
-#s3{
-    background: url("Sub3.png") no-repeat 0 0 / 15px;
+#Haydunn{
+    background: url("Haydunn.png") no-repeat 0 0 / 15px;
 }

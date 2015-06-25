@@ -27,15 +27,7 @@ nav > ul > li{/*direct descendants used to target only those main headings. Clas
     border-right: 1px solid rgba(0,0,0,0.3);
     background: url("buttonbg.png") repeat-x 0 0 / 5px; /*The image is quite large, so it must be scaled down here, 5px working best*/
 }
-nav > ul > li:not(:last-of-type){
-    float: left;
-    width: 12%; /*the buttons that aren't the smaller grey are 12%, *8=96% and 2px are spared for the margin*/
-    text-align: center;
-}
-nav > ul > li:last-of-type{
-    float: left;
-    width: 4%;
-}
+
 nav > ul > li > a{
     color: #fff;
     font: 1.1em bold HelveticaNeue, Helvetica, sans-serif;
@@ -106,4 +98,17 @@ nav li > ul > li{
 }
 nav li > ul > li > a{
     color: #2b4fcb;
+}
+
+/*============*/
+@media (min-width: 650px) {
+    nav > ul > li:not(:last-of-type){
+        float: left;
+        width: 12%; /*the buttons that aren't the smaller grey are 12%, *8=96% and 2px are spared for the margin*/
+        text-align: center;
+    }
+    nav > ul > li:last-of-type{
+        float: left;
+        width: 4%;
+    }
 }
